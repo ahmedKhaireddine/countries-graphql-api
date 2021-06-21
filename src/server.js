@@ -1,4 +1,7 @@
+require('dotenv').config();
+
 import { ApolloServer, gql } from 'apollo-server';
+const { PORT } = process.env;
 
 const typeDefs = gql`
     # Comments in GraphQL strings (such as this one) start with the hash (#) symbol.
@@ -37,7 +40,7 @@ const resolvers = {
     },
 };
 
-const Port = 4000;
+const Port = process.env.PORT || 8080;
 
 const server = new ApolloServer({ typeDefs, resolvers });
 
