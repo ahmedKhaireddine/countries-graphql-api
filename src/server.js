@@ -1,6 +1,8 @@
-require('dotenv').config();
-
+import dotenv from 'dotenv';
 import { ApolloServer, gql } from 'apollo-server';
+
+dotenv.config();
+
 const { PORT } = process.env;
 
 const typeDefs = gql`
@@ -40,7 +42,7 @@ const resolvers = {
     },
 };
 
-const Port = process.env.PORT || 8080;
+const Port = PORT || 8080;
 
 const server = new ApolloServer({ typeDefs, resolvers });
 
