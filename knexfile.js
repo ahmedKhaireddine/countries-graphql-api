@@ -21,10 +21,10 @@ export default  {
         user: DB_USERNAME
     },
     migrations: {
-        directory: "./src/db/migrations",
-        tableName: "knex_migrations"
+        directory: './src/db/migrations',
+        tableName: 'knex_migrations'
     },
     seeds: {
-        directory: "./src/db/seeds"
+        directory: './src/db/seeds'
     },
 }
