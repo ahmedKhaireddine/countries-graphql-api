@@ -1,4 +1,4 @@
-export const up = async knex => {
+exports.up = async knex => {
     return await knex.schema.createTable('countries', table => {
         table.increments('id').primary();
         table.string('alpha2Code');
@@ -22,4 +22,4 @@ export const up = async knex => {
     })
 };
 
-export const down = async knex => await knex.schema.dropTable('countries');
+exports.down = async knex => await knex.schema.dropTable('countries');

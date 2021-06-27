@@ -1,11 +1,11 @@
 import { Model } from 'objection';
-import knex from '../knexInstance';
+import knex from '../knexInstance.js';
 
 Model.knex(knex);
 
 export default class Country extends Model {
     static get tableName() {
-        return 'country';
+        return 'countries';
     }
 
     static get idColumn() {

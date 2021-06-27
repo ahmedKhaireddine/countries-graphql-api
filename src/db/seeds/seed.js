@@ -1,6 +1,6 @@
-import axios from 'axios';
+const axios = require('axios');
 
-export const seed = async knex => {
+exports.seed = async knex => {
     const url = "https://restcountries.eu/rest/v2/all";
 
     const { data } = await axios.get(url);

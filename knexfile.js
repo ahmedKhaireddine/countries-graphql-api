@@ -1,6 +1,4 @@
-import dotenv from 'dotenv';
-
-dotenv.config();
+require('dotenv').config();
 
 const {
     DB_CONNECTION,
@@ -11,7 +9,7 @@ const {
     DB_PASSWORD
 } = process.env;
 
-export default  {
+module.exports = {
     client: DB_CONNECTION,
     connection: {
         database: DB_DATABASE,
