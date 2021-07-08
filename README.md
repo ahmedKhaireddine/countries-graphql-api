@@ -1,2 +1,2 @@
-# countries-graphql-api
+# countries-graphql-project
 # En cours de création
