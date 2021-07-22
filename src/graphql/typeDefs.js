@@ -32,7 +32,12 @@ export default gql`
     # clients can execute, along with the return type for each. In this
     # case, the "countries" query returns an array of zero or more Countries (defined above).
     type Query {
-        countries: [Country!]!
+        countries(paginate: CountryPaginateInput) : [Country!]!
         country(id: ID!): Country!
+    }
+
+    input CountryPaginateInput {
+        offset: Int
+        limit: Int
     }
 `;
