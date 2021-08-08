@@ -10,7 +10,7 @@ exports.seed = async knex => {
     const fieldsToInsert = await data.map(element => {
         const {
             alpha2Code, alpha3Code, area, borders,
-            callingCodes, capital, demonym, flag, languages,
+            callingCodes, capital, demonym, languages,
             latlng, name, nativeName, numericCode, population,
             region, subregion, topLevelDomain, translations
         } = element;
@@ -23,7 +23,7 @@ exports.seed = async knex => {
             callingCodes: JSON.stringify(callingCodes),
             capital,
             demonym,
-            flag,
+            flag: `/data/${alpha3Code.toLowerCase()}.svg`,
             languages: JSON.stringify(languages),
             latlng: JSON.stringify(latlng),
             name,
