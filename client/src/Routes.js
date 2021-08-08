@@ -5,13 +5,13 @@ import Country from './views/Country';
 
 const routes = [
   {
+    component: Country,
+    path: "/countries/:id"
+  },
+  {
     component: Home,
     path: "/"
   },
-  {
-    component: Country,
-    path: "/countries/:id"
-  }
 ];
 
 const Routes = () => {
@@ -19,7 +19,7 @@ const Routes = () => {
     <Router>
       <Switch>
         {routes.map(({ component, path }, index) => {
-            return <Route key={index} exact path={path} component={component}/>
+          return <Route key={index} exact path={path} component={component}/>
         })}
       </Switch>
     </Router>
