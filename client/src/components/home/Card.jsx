@@ -6,7 +6,7 @@ const Card = ({index, item: { id, flag, name }}) => {
   return (
     <Link to={`/countries/${id}`}>
       <Container index={index}>
-        <Picture src={flag}/>
+        <Picture src={`http://localhost:4000/${flag}`}/>
         <TitleCard>{name}</TitleCard>
       </Container>
     </Link>

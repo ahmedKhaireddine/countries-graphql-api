@@ -28,7 +28,7 @@ const fetchCountriesFailure = error => {
 
 export const fetchCountries = (paginate = { offset: 0, limit: 12 }) => {
   return async (dispatch) => {
-    dispatch(fetchCountriesRequest);
+    dispatch(fetchCountriesRequest());
     try {
       const { data: { countries }} = await Client.query({
         query: GET_COUNTRIES,
